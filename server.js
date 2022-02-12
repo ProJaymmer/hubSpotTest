@@ -22,6 +22,8 @@ const morgan = require('morgan');
 app.use(morgan('dev'));
 
 // IMPORT CONTROLLER FILE
+const pageVisitsController = require('./controllers/pageVisits');
+app.use('/hubspotapi', pageVisitsController);
 
 // PORT STUFF
 // ONCE SERVER.JS IS LIVE, 'SHOW ROUTES' WILL DISPLAY AT http://localhost:4000
